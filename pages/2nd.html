@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>CGPA calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Latest compiled and minified CSS -->
     <link
@@ -20,36 +21,160 @@
     <div class="container">
       <pre>
      <h1>SGPA calculator(2nd)</h1>
-    C Labaratory           :<input type="text" id="credit1"><br>
-    Physics Labaratory     :<input type="text" id="credit2"><br>
-    Manufacturing Practice :<input type="text" id="credit3"><br>
-    Discrete mathematics   :<input type="text" id="credit4"><br>
-    Technical English-II   :<input type="text" id="credit5"><br>
-    Engineering Physics    :<input type="text" id="credit6"><br>
-    C Programming          :<input type="text" id="credit7"><br>
+C Labaratory           :<select id="credit1">
+		<option>O</option>
+		<option>A+</option>
+		<option>A</option>
+		<option>B+</option>
+		<option>B</option>
+	</select><br>
+Physics Labaratory     :<select id="credit2">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+Manufacturing Practice :<select id="credit3">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+Discrete Mathemarice   :<select id="credit4">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+Technical English-II   :<select id="credit5">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+Enginnering Physics    :<select id="credit6">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+C Programming          :<select id="credit7">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+        </select><br>
 <button class="btn btn-info" onclick="Credits()">Click here</button>
 <h4 id="total"></h4>
 <h4>Credits : 18</h4>
-  <h3 id="Result" >Your SGPA is ... </h3>
-  <div class="d-flex">
-    <a href="../index.html" class="btn btn-info">Prev</a>&nbsp;&nbsp;
-    <a href="./3RD.html" class="btn btn-info">Next</a>
-  </div>
+<h3 id="Result" >Your SGPA is ... </h3>
+<div class="d-flex">
+<a href="../index.html" class="btn btn-info">Prev</a>&nbsp;&nbsp;
+<a href="./3rd.html" class="btn btn-info ">Next</a>
+</div>
   </pre>
     </div>
     <script>
       function Credits() {
-        var a = Number(document.getElementById("credit1").value);
-        b = Number(document.getElementById("credit2").value);
-        c = Number(document.getElementById("credit3").value);
-        d = Number(document.getElementById("credit4").value);
-        e = Number(document.getElementById("credit5").value);
-        f = Number(document.getElementById("credit6").value);
-        g = Number(document.getElementById("credit7").value);
+        var a = document.getElementById("credit1").value;
+        b = document.getElementById("credit2").value;
+        c = document.getElementById("credit3").value;
+        d = document.getElementById("credit4").value;
+        e = document.getElementById("credit5").value;
+        f = document.getElementById("credit6").value;
+        g = document.getElementById("credit7").value;
+        if (a == "O") {
+          a = 10;
+        } else if (a == "A+") {
+          a = 9;
+        } else if (a == "A") {
+          a = 8;
+        } else if (a == "B+") {
+          a = 7;
+        } else if (a == "B") {
+          a = 6;
+        }
+        if (b == "O") {
+          b = 10;
+        } else if (b == "A+") {
+          b = 9;
+        } else if (b == "A") {
+          b = 8;
+        } else if (b == "B+") {
+          b = 7;
+        } else if (b == "B") {
+          b = 6;
+        }
+        if (c == "O") {
+          c = 10;
+        } else if (c == "A+") {
+          c = 9;
+        } else if (c == "A") {
+          c = 8;
+        } else if (c == "B+") {
+          c = 7;
+        } else if (c == "B") {
+          c = 6;
+        }
+        if (d == "O") {
+          d = 10;
+        } else if (d == "A+") {
+          d = 9;
+        } else if (d == "A") {
+          d = 8;
+        } else if (d == "B+") {
+          d = 7;
+        } else if (d == "B") {
+          d = 6;
+        }
+        if (e == "O") {
+          e = 10;
+        } else if (e == "A+") {
+          e = 9;
+        } else if (e == "A") {
+          e = 8;
+        } else if (e == "B+") {
+          e = 7;
+        } else if (e == "B") {
+          e = 6;
+        }
+        if (f == "O") {
+          f = 10;
+        } else if (f == "A+") {
+          f = 9;
+        } else if (f == "A") {
+          f = 8;
+        } else if (f == "B+") {
+          f = 7;
+        } else if (f == "B") {
+          f = 6;
+        }
+        if (g == "O") {
+          g = 10;
+        } else if (g == "A+") {
+          g = 9;
+        } else if (g == "A") {
+          g = 8;
+        } else if (g == "B+") {
+          g = 7;
+        } else if (g == "B") {
+          g = 6;
+        }
+        /*'A+'=9;
+		'A'=8;
+		'B+'=7;
+		'B'=6;*/
         Total = 1 * a + 1 * b + 3 * c + 4 * d + 3 * e + 3 * f + 3 * g;
-        Result = (Total / 18).toFixed(3);
+        Result = Total / 18;
+        n = Result.toFixed(3);
         document.getElementById("total").innerHTML = "Total : " + Total;
-        document.getElementById("Result").innerHTML = "Your SGPA is  " + Result;
+        document.getElementById("Result").innerHTML = "Your SGPA is  " + n;
       }
     </script>
   </body>
