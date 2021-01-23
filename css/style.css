@@ -1,0 +1,30 @@
+pre {
+  box-shadow: 1px 1px 5px 5px grey;
+}
+.container {
+  text-align: center;
+  border-radius: 5px;
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+  pre {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    background: linear-gradient(120deg, blue, yellow);
+  }
+  input {
+    width: 45px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CGPA calculator</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <pre>
+     <h1>SGPA calculator(2nd)</h1>
+    C Labaratory           :<input type="text" id="credit1"><br>
+    Physics Labaratory     :<input type="text" id="credit2"><br>
+    Manufacturing Practice :<input type="text" id="credit3"><br>
+    Discrete mathematics   :<input type="text" id="credit4"><br>
+    Technical English-II   :<input type="text" id="credit5"><br>
+    Engineering Physics    :<input type="text" id="credit6"><br>
+    C Programming          :<input type="text" id="credit7"><br>
+<button class="btn btn-info" onclick="Credits()">Click here</button>
+<h4 id="total"></h4>
+<h4>Credits : 18</h4>
+  <h3 id="Result" >Your SGPA is ... </h3>
+  <div class="d-flex">
+    <a href="../index.html" class="btn btn-info">Prev</a>&nbsp;&nbsp;
+    <a href="./3RD.html" class="btn btn-info">Next</a>
+  </div>
+  </pre>
+    </div>
+    <script>
+      function Credits() {
+        var a = Number(document.getElementById("credit1").value);
+        b = Number(document.getElementById("credit2").value);
+        c = Number(document.getElementById("credit3").value);
+        d = Number(document.getElementById("credit4").value);
+        e = Number(document.getElementById("credit5").value);
+        f = Number(document.getElementById("credit6").value);
+        g = Number(document.getElementById("credit7").value);
+        Total = 1 * a + 1 * b + 3 * c + 4 * d + 3 * e + 3 * f + 3 * g;
+        Result = (Total / 18).toFixed(3);
+        document.getElementById("total").innerHTML = "Total : " + Total;
+        document.getElementById("Result").innerHTML = "Your SGPA is  " + Result;
+      }
+    </script>
+  </body>
+</html>
